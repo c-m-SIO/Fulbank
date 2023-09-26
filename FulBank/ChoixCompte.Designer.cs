@@ -1,6 +1,6 @@
 ﻿namespace FulBank
 {
-    partial class Form2
+    partial class ChoixCompte
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChoixCompte));
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             label1 = new Label();
@@ -49,7 +49,7 @@
             // 
             // pictureBox2
             // 
-            pictureBox2.BackColor = Color.FromArgb(224, 224, 224);
+            pictureBox2.BackColor = Color.Gainsboro;
             pictureBox2.Location = new Point(90, 501);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(661, 165);
@@ -59,6 +59,7 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Gainsboro;
             label1.Location = new Point(130, 524);
             label1.Name = "label1";
             label1.Size = new Size(54, 15);
@@ -69,6 +70,7 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = Color.Gainsboro;
             label2.Location = new Point(130, 611);
             label2.Name = "label2";
             label2.Size = new Size(42, 15);
@@ -79,12 +81,13 @@
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.FromArgb(224, 224, 224);
-            label3.ForeColor = Color.Blue;
-            label3.Location = new Point(508, 524);
+            label3.ForeColor = Color.FromArgb(22, 43, 99);
+            label3.Location = new Point(510, 524);
             label3.Name = "label3";
             label3.Size = new Size(70, 15);
             label3.TabIndex = 4;
             label3.Text = "OPÉRATION";
+            label3.Click += label3_Click;
             // 
             // Form2
             // 

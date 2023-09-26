@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FulBank
 {
-    public partial class Form2 : Form
+    public partial class ChoixCompte : Form
     {
-        public Form2()
+        public ChoixCompte()
         {
             InitializeComponent();
         }
@@ -23,6 +23,11 @@ namespace FulBank
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
