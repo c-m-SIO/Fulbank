@@ -1,6 +1,6 @@
 ﻿namespace FulBank
 {
-    partial class Form4
+    partial class Virement
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Virement));
             pictureBox1 = new PictureBox();
             label1 = new Label();
             textBox1 = new TextBox();

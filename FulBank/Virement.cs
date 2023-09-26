@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FulBank
 {
-    public partial class Form4 : Form
+    public partial class Virement : Form
     {
-        public Form4()
+        public Virement()
         {
             InitializeComponent();
         }
