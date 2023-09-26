@@ -1,6 +1,6 @@
 ﻿namespace FulBank
 {
-    partial class Form1
+    partial class login
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
             button1 = new Button();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
@@ -100,7 +100,6 @@
             Controls.Add(button1);
             Name = "Form1";
             Text = "Form1";
-            
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
