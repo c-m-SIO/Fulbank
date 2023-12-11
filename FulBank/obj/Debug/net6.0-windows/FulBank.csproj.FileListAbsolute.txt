@@ -1,0 +1,11 @@
+D:\MM\Fulbank\FulBank\obj\Debug\net6.0-windows\FulBank.csproj.AssemblyReference.cache
+D:\MM\Fulbank\FulBank\obj\Debug\net6.0-windows\FulBank.ChoixCompte.resources
+D:\MM\Fulbank\FulBank\obj\Debug\net6.0-windows\FulBank.Compte.resources
+D:\MM\Fulbank\FulBank\obj\Debug\net6.0-windows\FulBank.login.resources
+D:\MM\Fulbank\FulBank\obj\Debug\net6.0-windows\FulBank.Properties.Resources.resources
+D:\MM\Fulbank\FulBank\obj\Debug\net6.0-windows\FulBank.Virement.resources
+D:\MM\Fulbank\FulBank\obj\Debug\net6.0-windows\FulBank.csproj.GenerateResource.cache
+D:\MM\Fulbank\FulBank\obj\Debug\net6.0-windows\FulBank.GeneratedMSBuildEditorConfig.editorconfig
+D:\MM\Fulbank\FulBank\obj\Debug\net6.0-windows\FulBank.AssemblyInfoInputs.cache
+D:\MM\Fulbank\FulBank\obj\Debug\net6.0-windows\FulBank.AssemblyInfo.cs
+D:\MM\Fulbank\FulBank\obj\Debug\net6.0-windows\FulBank.csproj.CoreCompileInputs.cache

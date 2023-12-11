@@ -29,53 +29,47 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
-            button1 = new Button();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            linkLabel1 = new LinkLabel();
+            bouton_login = new Button();
+            Username = new TextBox();
+            password = new TextBox();
             pictureBox1 = new PictureBox();
+            passwordforgotten = new LinkLabel();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // button1
+            // bouton_login
             // 
-            button1.BackColor = Color.FromArgb(22, 43, 99);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(264, 657);
-            button1.Name = "button1";
-            button1.Size = new Size(278, 32);
-            button1.TabIndex = 0;
-            button1.Text = "Se connecter";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            bouton_login.BackColor = Color.FromArgb(22, 43, 99);
+            bouton_login.ForeColor = Color.White;
+            bouton_login.Location = new Point(264, 657);
+            bouton_login.Name = "bouton_login";
+            bouton_login.Size = new Size(278, 32);
+            bouton_login.TabIndex = 0;
+            bouton_login.Text = "LOGIN";
+            bouton_login.UseVisualStyleBackColor = false;
+            bouton_login.Click += button1_Click;
             // 
-            // textBox1
+            // Username
             // 
-            textBox1.BackColor = SystemColors.ButtonHighlight;
-            textBox1.Location = new Point(264, 563);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(278, 23);
-            textBox1.TabIndex = 1;
-            textBox1.TextChanged += textBox1_TextChanged;
+            Username.BackColor = Color.FromArgb(128, 194, 236);
+            Username.ForeColor = Color.White;
+            Username.Location = new Point(264, 563);
+            Username.Name = "Username";
+            Username.Size = new Size(278, 23);
+            Username.TabIndex = 1;
+            Username.Text = "USERNAME";
+            Username.TextChanged += textBox1_TextChanged;
             // 
-            // textBox2
+            // password
             // 
-            textBox2.Location = new Point(264, 606);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(278, 23);
-            textBox2.TabIndex = 2;
-            textBox2.TextChanged += textBox2_TextChanged;
-            // 
-            // linkLabel1
-            // 
-            linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(264, 692);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(60, 15);
-            linkLabel1.TabIndex = 3;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "linkLabel1";
-            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
+            password.BackColor = Color.FromArgb(128, 194, 236);
+            password.ForeColor = Color.White;
+            password.Location = new Point(264, 606);
+            password.Name = "password";
+            password.Size = new Size(278, 23);
+            password.TabIndex = 2;
+            password.Text = "*************";
+            password.TextChanged += textBox2_TextChanged;
             // 
             // pictureBox1
             // 
@@ -88,17 +82,28 @@
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
             // 
-            // Form1
+            // passwordforgotten
+            // 
+            passwordforgotten.AutoSize = true;
+            passwordforgotten.LinkColor = Color.FromArgb(0, 0, 0, 0);
+            passwordforgotten.Location = new Point(330, 703);
+            passwordforgotten.Name = "passwordforgotten";
+            passwordforgotten.Size = new Size(144, 15);
+            passwordforgotten.TabIndex = 6;
+            passwordforgotten.TabStop = true;
+            passwordforgotten.Text = "PASSWORD FORGOTTEN ?";
+            // 
+            // login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1165, 1087);
+            Controls.Add(passwordforgotten);
             Controls.Add(pictureBox1);
-            Controls.Add(linkLabel1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(button1);
-            Name = "Form1";
+            Controls.Add(password);
+            Controls.Add(Username);
+            Controls.Add(bouton_login);
+            Name = "login";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
@@ -107,10 +112,10 @@
 
         #endregion
 
-        private Button button1;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private LinkLabel linkLabel1;
+        private Button bouton_login;
+        private TextBox Username;
+        private TextBox password;
         private PictureBox pictureBox1;
+        private LinkLabel passwordforgotten;
     }
 }

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\moreau\\Documents\\Fulbank\\FulBank\\FulBank\\FulBank.csproj": {}
+    "D:\\MM\\Fulbank\\FulBank\\FulBank.csproj": {}
   },
   "projects": {
-    "C:\\Users\\moreau\\Documents\\Fulbank\\FulBank\\FulBank\\FulBank.csproj": {
+    "D:\\MM\\Fulbank\\FulBank\\FulBank.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\moreau\\Documents\\Fulbank\\FulBank\\FulBank\\FulBank.csproj",
+        "projectUniqueName": "D:\\MM\\Fulbank\\FulBank\\FulBank.csproj",
         "projectName": "FulBank",
-        "projectPath": "C:\\Users\\moreau\\Documents\\Fulbank\\FulBank\\FulBank\\FulBank.csproj",
-        "packagesPath": "C:\\Users\\moreau\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\moreau\\Documents\\Fulbank\\FulBank\\FulBank\\obj\\",
+        "projectPath": "D:\\MM\\Fulbank\\FulBank\\FulBank.csproj",
+        "packagesPath": "C:\\Users\\MARAIS\\.nuget\\packages\\",
+        "outputPath": "D:\\MM\\Fulbank\\FulBank\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\moreau\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MARAIS\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -43,6 +43,12 @@
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "MySqlConnector": {
+              "target": "Package",
+              "version": "[2.2.7, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

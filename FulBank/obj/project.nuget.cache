@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "82Ln8rAmjsLp7UkZmO+3Fggqcpmwpw+ZUu5BQkR3AHcN+P2JDFCPQOpt6fb0kue1fXbVm2uhf2DawdQQlvNDYw==",
+  "dgSpecHash": "Qc9BQO4565TQS/8aXuWg05pIQQw5MXt1ENZZXs7iG1DTooYSN7KfTDdhFx41fFz6wTKfGNz6vr4hr8+FJ5Ailw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\moreau\\Documents\\Fulbank\\FulBank\\FulBank\\FulBank.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\MM\\Fulbank\\FulBank\\FulBank.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\MARAIS\\.nuget\\packages\\mysqlconnector\\2.2.7\\mysqlconnector.2.2.7.nupkg.sha512"
+  ],
   "logs": []
 }

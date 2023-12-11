@@ -1,0 +1,11 @@
+Start transaction;
+
+set solde = solde + montant from compte where id = idreceveur
+set solde = solde - montant from compte where id = iddebiteur
+insert into transaction values(taux*debit,now(),1/taux,debitreceveur,creditreceveur,idreceveur)
+insert into transaction values(-debit,now(),(taux,debitreceveur,creditreceveur,iddebiteur)
+
+commit;
+
+avoir juste un montant et pas debit credit
+montant debiteur = -montant*taux crediteur
