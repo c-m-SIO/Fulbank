@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Compte));
             pictureBox1 = new PictureBox();
             label3 = new Label();
             label2 = new Label();
@@ -52,7 +51,7 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
+            pictureBox1.Image = Properties.Resources.logo1;
             pictureBox1.Location = new Point(215, 65);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(357, 369);
@@ -78,6 +77,7 @@
             label2.Size = new Size(42, 15);
             label2.TabIndex = 7;
             label2.Text = "SOLDE";
+            label2.UseWaitCursor = true;
             // 
             // label1
             // 
@@ -87,6 +87,7 @@
             label1.Size = new Size(54, 15);
             label1.TabIndex = 6;
             label1.Text = "COMPTE";
+            label1.UseWaitCursor = true;
             // 
             // pictureBox2
             // 
@@ -137,6 +138,7 @@
             label6.Size = new Size(81, 15);
             label6.TabIndex = 12;
             label6.Text = "Mme.MARTIN";
+            label6.UseWaitCursor = true;
             // 
             // label12
             // 
@@ -146,6 +148,7 @@
             label12.Size = new Size(39, 15);
             label12.TabIndex = 18;
             label12.Text = "+500€";
+            label12.UseWaitCursor = true;
             // 
             // label13
             // 
@@ -155,6 +158,7 @@
             label13.Size = new Size(75, 15);
             label13.TabIndex = 19;
             label13.Text = "Mr.RICHARD";
+            label13.UseWaitCursor = true;
             // 
             // label15
             // 
@@ -164,6 +168,7 @@
             label15.Size = new Size(42, 15);
             label15.TabIndex = 21;
             label15.Text = "-2000€";
+            label15.UseWaitCursor = true;
             // 
             // label16
             // 
@@ -173,6 +178,7 @@
             label16.Size = new Size(56, 15);
             label16.TabIndex = 22;
             label16.Text = "Mr.BROC";
+            label16.UseWaitCursor = true;
             // 
             // label17
             // 
@@ -182,6 +188,7 @@
             label17.Size = new Size(65, 15);
             label17.TabIndex = 23;
             label17.Text = "16/10/2023";
+            label17.UseWaitCursor = true;
             // 
             // label18
             // 
@@ -191,6 +198,7 @@
             label18.Size = new Size(51, 15);
             label18.TabIndex = 24;
             label18.Text = "+25000€";
+            label18.UseWaitCursor = true;
             // 
             // label11
             // 
@@ -210,6 +218,7 @@
             label14.Size = new Size(65, 15);
             label14.TabIndex = 26;
             label14.Text = "15/10/2023";
+            label14.UseWaitCursor = true;
             // 
             // Compte
             // 
