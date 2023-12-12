@@ -392,6 +392,7 @@
             Controls.Add(pictureBox1);
             Name = "ChoixCompte";
             Text = " ";
+            Load += ChoixCompte_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();

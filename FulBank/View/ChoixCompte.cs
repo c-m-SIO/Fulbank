@@ -36,5 +36,10 @@ namespace FulBank
         {
 
         }
+
+        private void ChoixCompte_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

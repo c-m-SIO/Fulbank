@@ -18,10 +18,10 @@ CREATE TABLE Compte(
    solde DECIMAL(15,2),
    plafond DECIMAL(15,2),
    decouvert DECIMAL(15,2),
-   id INT NOT NULL,
+   id_devise INT NOT NULL,
    id_client INT NOT NULL,
    PRIMARY KEY(RIB),
-   FOREIGN KEY(id) REFERENCES Devise(id),
+   FOREIGN KEY(id_devise) REFERENCES Devise(id),
    FOREIGN KEY(id_client) REFERENCES Client(id)
 );
 
@@ -33,14 +33,14 @@ CREATE TABLE Transactions(
    RIB_debiteur INT NOT NULL,
    RIB_crediteur INT NOT NULL,
    PRIMARY KEY(id),
-   FOREIGN KEY(RIB_debiteur) REFERENCES Compte(RIB_debiteur),
-   FOREIGN KEY(RIB_crediteur) REFERENCES Compte(RIB_debiteur)
+   FOREIGN KEY(RIB_debiteur) REFERENCES Compte(RIB),
+   FOREIGN KEY(RIB_crediteur) REFERENCES Compte(RIB)
 );
 
 CREATE TABLE Beneficiaire(
-   id INT,
+   id_client INT,
    id_beneficiaire INT,
-   PRIMARY KEY(id, id_beneficiaire),
-   FOREIGN KEY(id) REFERENCES Client(id),
+   PRIMARY KEY(id_client, id_beneficiaire),
+   FOREIGN KEY(id_client) REFERENCES Client(id),
    FOREIGN KEY(id_beneficiaire) REFERENCES Client(id)
 );

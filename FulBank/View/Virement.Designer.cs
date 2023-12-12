@@ -152,11 +152,11 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(337, 607);
+            label6.Location = new Point(357, 605);
             label6.Name = "label6";
-            label6.Size = new Size(88, 15);
+            label6.Size = new Size(52, 15);
             label6.TabIndex = 14;
-            label6.Text = "Philippe Seillon";
+            label6.Text = "zfeizfhez";
             // 
             // Virement
             // 
