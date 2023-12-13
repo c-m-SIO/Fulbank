@@ -15,13 +15,13 @@ namespace FulBank.ViewModel
             ModelRepository = new Model.ModelRepository();
         }
 
-        public string testconnexion()
-        {
-            if (ModelRepository.testconnexion()!="")
-            {
-                return ModelRepository.testconnexion();
-            }
-            return "";
-        }
+        //public string testconnexion()
+        //{
+        //    if (ModelRepository.testconnexion()!="")
+        //    {
+        //        return ModelRepository.testconnexion();
+        //    }
+        //    return "";
+        //}
     }
 }

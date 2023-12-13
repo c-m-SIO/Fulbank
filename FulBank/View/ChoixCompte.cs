@@ -7,14 +7,40 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FulBank.Model;
+using MySqlConnector;
 
 namespace FulBank
 {
     public partial class ChoixCompte : Form
     {
+        private Compte leCompte;
+        private ModelRepository model;
+        private DataTable donneesCompte;
         public ChoixCompte()
         {
             InitializeComponent();
+            model = new Model.ModelRepository();
+            donneesCompte = new DataTable();
+            donneesCompte = model.recupCompteDb();
+
+            foreach (DataRow row in donneesCompte.Rows)
+            {
+                int rib = Convert.ToInt32(row["RIB"]);
+                string nom = row["nom_proprietaire"].ToString();
+                decimal solde = Convert.ToDecimal(row["solde"]);
+                decimal plafond = Convert.ToDecimal(row["plafond"]);
+                decimal decouvert = Convert.ToDecimal(row["decouvert"]);
+
+                leCompte = new Compte();
+
+                MessageBox.Show(rib.ToString());
+
+                // Ajoutez un élément à la combobox en utilisant le nom de l'arme
+                // et conservez l'id de l'arme comme valeur associée à l'élément.
+                //Compte unCompte = new Compte { Text = nom, Value = id, Type = type };
+                //comboBoxArmes.Items.Add(uneArme);
+            }
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -39,7 +65,7 @@ namespace FulBank
 
         private void ChoixCompte_Load(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

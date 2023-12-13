@@ -1,4 +1,5 @@
 ﻿using MySqlConnector;
+using System.Data;
 using System.Data.SQLite;
 
 namespace FulBank.Model
@@ -6,11 +7,11 @@ namespace FulBank.Model
     internal class ModelRepository
     {
         private MySqlConnection connexion;
-        public string testconnexion()
+        public ModelRepository()
         {
             var builder = new MySqlConnectionStringBuilder
             {
-                Server = "172.16.119.1",
+                Server = "172.16.119.7",
                 UserID = "mathieu",
                 Password = "squeezie",
                 Database = "fulbank",
@@ -21,13 +22,38 @@ namespace FulBank.Model
             try
             {
                 connexion.Open();
-                return("reussie");
+                //MessageBox.Show("reussie");
 
             }
             catch (Exception ex)
             {
-                return(ex.Message);
+                MessageBox.Show(ex.Message);
             }
+        }
+
+        public DataTable recupCompteDb()
+        {
+           
+                MySqlCommand cmd = new MySqlCommand("SELECT * FROM Compte", connexion);
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                DataTable dataTable = new DataTable();
+                adapter.Fill(dataTable);
+                
+
+            return dataTable;
+
+                //foreach (DataRow row in dataTable.Rows)
+                //{
+                //    int rib = Convert.ToInt32(row["RIB"]);
+                //    string nom = row["nom"].ToString();
+                //    string type = row["type"].ToString();
+
+                //    // Ajoutez un élément à la combobox en utilisant le nom de l'arme
+                //    // et conservez l'id de l'arme comme valeur associée à l'élément.
+                //    Compte unCompte = new Compte { Text = nom, Value = id, Type = type };
+                //    comboBoxArmes.Items.Add(uneArme);
+                //}
+            
         }
     }
 }
