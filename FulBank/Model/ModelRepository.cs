@@ -1,33 +1,36 @@
 ﻿using MySqlConnector;
+using System.Data.SqlClient;
 using System.Data.SQLite;
+using System.Drawing;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace FulBank.Model
 {
     internal class ModelRepository
     {
-        private MySqlConnection connexion;
-        public string testconnexion()
+        private string IPDB = "172.16.119.7";
+        private string UserDB = "mathieu";
+        private string PasswordDB = "squeezie";
+        private string DatabaseDB = "fulbank";
+        public string GetMdpBd(string Username)
         {
-            var builder = new MySqlConnectionStringBuilder
+            using (MySqlConnection connexion = new MySqlConnection())
             {
-                Server = "172.16.119.1",
-                UserID = "mathieu",
-                Password = "squeezie",
-                Database = "fulbank",
-            };
-
-            connexion = new MySqlConnection(builder.ConnectionString);
-
-            try
-            {
+                
+                string stringconnexion = @"server=" + IPDB + ";userid=" + UserDB + ";password=" + PasswordDB + ";database=" + DatabaseDB;
+                connexion.ConnectionString = stringconnexion;
                 connexion.Open();
-                return("reussie");
 
-            }
-            catch (Exception ex)
-            {
-                return(ex.Message);
-            }
+                string query = "Select C.password from Client C where C.prenom = @Username;";
+                MySqlCommand cmd = new MySqlCommand(query, connexion);
+                cmd.Parameters.AddWithValue("@Username", Username);
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    return (string)reader["password"];
+                }
+            }return "erreur";
         }
     }
 }

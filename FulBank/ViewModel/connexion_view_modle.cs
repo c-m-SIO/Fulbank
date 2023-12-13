@@ -1,27 +1,21 @@
-﻿using System;
+﻿using FulBank.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
-using Model = FulBank.Model;
+using FB_M = FulBank.Model;
 
 namespace FulBank.ViewModel
 {
     internal class connexion_view_modle
     {
-        private Model.ModelRepository ModelRepository;
-        public connexion_view_modle()
+        private FB_M.ModelRepository Modele = new ModelRepository();
+        public string testconnexion(string Username, string Password)
         {
-            ModelRepository = new Model.ModelRepository();
-        }
-
-        public string testconnexion()
-        {
-            if (ModelRepository.testconnexion()!="")
-            {
-                return ModelRepository.testconnexion();
-            }
-            return "";
+            string res = Modele.GetMdpBd(Username);
+            return res == Password ? "sucess" : res == "erreur" ? "erreur" : "badpwd";
         }
     }
 }
