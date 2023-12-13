@@ -14,7 +14,7 @@ namespace FulBank
 {
     public partial class ChoixCompte : Form
     {
-        private Compte leCompte;
+        private unCompte leCompte;
         private ModelRepository model;
         private DataTable donneesCompte;
         public ChoixCompte()
@@ -28,11 +28,12 @@ namespace FulBank
             {
                 int rib = Convert.ToInt32(row["RIB"]);
                 string nom = row["nom_proprietaire"].ToString();
+                decimal taux = Convert.ToDecimal(row["taux_interet"]);
                 decimal solde = Convert.ToDecimal(row["solde"]);
                 decimal plafond = Convert.ToDecimal(row["plafond"]);
                 decimal decouvert = Convert.ToDecimal(row["decouvert"]);
 
-                leCompte = new Compte();
+                leCompte = new unCompte(rib, taux, nom, solde, plafond, decouvert);
 
                 MessageBox.Show(rib.ToString());
 
