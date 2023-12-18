@@ -13,11 +13,11 @@ namespace FulBank
 {
     public partial class Compte : Form
     {
-        private FB_VM.connexion_view_modle ConnexionViewModel;
+        private FB_VM.connexion_view_model ConnexionViewModel;
         public Compte()
         {
             InitializeComponent();
-            ConnexionViewModel = new FB_VM.connexion_view_modle();
+            ConnexionViewModel = new FB_VM.connexion_view_model();
         }
 
         private void Compte_Load(object sender, EventArgs e)

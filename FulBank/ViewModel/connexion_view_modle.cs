@@ -9,7 +9,7 @@ using FB_M = FulBank.Model;
 
 namespace FulBank.ViewModel
 {
-    internal class connexion_view_modle
+    internal class connexion_view_model
     {
         private FB_M.ModelRepository Modele = new ModelRepository();
         public string testconnexion(string Username, string Password)
