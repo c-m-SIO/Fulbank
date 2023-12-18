@@ -11,7 +11,7 @@ namespace FulBank.Model
         {
             var builder = new MySqlConnectionStringBuilder
             {
-                Server = "172.16.119.7",
+                Server = "172.16.119.6",
                 UserID = "mathieu",
                 Password = "squeezie",
                 Database = "fulbank",
@@ -31,7 +31,7 @@ namespace FulBank.Model
             }
         }
 
-        public DataTable recupCompteDb()
+        public DataTable recupComptesUtilisateur()
         {
            
                 MySqlCommand cmd = new MySqlCommand("SELECT * FROM Compte", connexion);
@@ -55,5 +55,8 @@ namespace FulBank.Model
                 //}
             
         }
+
+
+
     }
 }

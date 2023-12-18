@@ -22,7 +22,7 @@ namespace FulBank
             InitializeComponent();
             model = new Model.ModelRepository();
             donneesCompte = new DataTable();
-            donneesCompte = model.recupCompteDb();
+            donneesCompte = model.recupComptesUtilisateur();
 
             foreach (DataRow row in donneesCompte.Rows)
             {
@@ -66,6 +66,7 @@ namespace FulBank
 
         private void ChoixCompte_Load(object sender, EventArgs e)
         {
+
 
         }
     }
