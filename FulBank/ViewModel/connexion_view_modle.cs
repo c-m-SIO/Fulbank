@@ -14,8 +14,22 @@ namespace FulBank.ViewModel
         private FB_M.ModelRepository Modele = new ModelRepository();
         public string testconnexion(string Username, string Password)
         {
+<<<<<<< HEAD
             string res = Modele.GetMdpBd(Username);
             return res == Password ? "sucess" : res == "erreur" ? "erreur" : "badpwd";
         }
+=======
+            ModelRepository = new Model.ModelRepository();
+        }
+
+        //public string testconnexion()
+        //{
+        //    if (ModelRepository.testconnexion()!="")
+        //    {
+        //        return ModelRepository.testconnexion();
+        //    }
+        //    return "";
+        //}
+>>>>>>> f51b3a1f704be5ae7904b249e407a7c799c051a9
     }
 }

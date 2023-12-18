@@ -105,6 +105,7 @@
             Controls.Add(bouton_login);
             Name = "login";
             Text = "Form1";
+            Load += login_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

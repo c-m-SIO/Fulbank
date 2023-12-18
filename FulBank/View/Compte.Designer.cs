@@ -36,7 +36,7 @@
             pictureBox2 = new PictureBox();
             button1 = new Button();
             label4 = new Label();
-            label5 = new Label();
+            lbl_solde = new Label();
             label6 = new Label();
             label12 = new Label();
             label13 = new Label();
@@ -121,15 +121,16 @@
             label4.Text = "Épargne";
             label4.UseWaitCursor = true;
             // 
-            // label5
+            // lbl_solde
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(548, 539);
-            label5.Name = "label5";
-            label5.Size = new Size(43, 15);
-            label5.TabIndex = 11;
-            label5.Text = "25000€";
-            label5.UseWaitCursor = true;
+            lbl_solde.AutoSize = true;
+            lbl_solde.Location = new Point(548, 539);
+            lbl_solde.Name = "lbl_solde";
+            lbl_solde.Size = new Size(43, 15);
+            lbl_solde.TabIndex = 11;
+            lbl_solde.Text = "25000€";
+            lbl_solde.UseWaitCursor = true;
+            lbl_solde.Click += lbl_solde_Click;
             // 
             // label6
             // 
@@ -236,7 +237,7 @@
             Controls.Add(label13);
             Controls.Add(label12);
             Controls.Add(label6);
-            Controls.Add(label5);
+            Controls.Add(lbl_solde);
             Controls.Add(label4);
             Controls.Add(button1);
             Controls.Add(label3);
@@ -248,6 +249,7 @@
             Name = "Compte";
             Text = "Form3";
             UseWaitCursor = true;
+            Load += Compte_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
@@ -263,7 +265,7 @@
         private PictureBox pictureBox2;
         private Button button1;
         private Label label4;
-        private Label label5;
+        private Label lbl_solde;
         private Label label6;
         private Label label12;
         private Label label13;

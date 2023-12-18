@@ -44,6 +44,7 @@ namespace FulBank
 
         private void button1_Click/* bouton_login */(object sender, EventArgs e)
         {
+
             if (Username.Text == "")
             {
                 MessageBox.Show("Le champ USERNAME doit être rempli.");
@@ -54,6 +55,7 @@ namespace FulBank
             }
             else
             {
+<<<<<<< HEAD
                 switch (ConnexionViewModel.testconnexion(Username.Text, password.Text))
                 {
                     case "success":
@@ -66,7 +68,44 @@ namespace FulBank
                         MessageBox.Show("L'utilisateur n'existe pas");
                         break;
                 }
+=======
             }
+
+            //MessageBox.Show(ConnexionViewModel.testconnexion());
+
+            string about_this_user_query = "select * from user where username = " + Username.Text + ";";
+
+            /* about_this_user == mysql.execute(about_this_user_query); */
+
+            if (null == "" /*about_this_user*/)
+            {
+                MessageBox.Show("Cet utilisateur n'existe pas.");
+>>>>>>> f51b3a1f704be5ae7904b249e407a7c799c051a9
+            }
+            else
+            {
+                string wanted_password_request = ("select password from user where username =" + Username.Text + ";");
+            }
+
+            /* wanted_password = mysql.execute(wanted_password_request) */
+
+            /*if (HashPasword(password.Text, out var salt) == ""/*wanted_password*/
+            //{
+            /* rediriger vers la vue de choix de compte, parmis les comptes correspondants à l'username */
+            /*}
+            else
+            {
+                MessageBox.Show("Mauvais mot de passe.");
+            }*/
+
         }
+<<<<<<< HEAD
+=======
+
+        private void login_Load(object sender, EventArgs e)
+        {
+
+        }
+>>>>>>> f51b3a1f704be5ae7904b249e407a7c799c051a9
     }
 }
