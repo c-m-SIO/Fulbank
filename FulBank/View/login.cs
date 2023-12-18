@@ -19,11 +19,11 @@ namespace FulBank
 {
     public partial class login : Form
     {
-        private FB_VM.connexion_view_modle ConnexionViewModel;
+        private FB_VM.connexion_view_model ConnexionViewModel;
         public login()
         {
             InitializeComponent();
-            ConnexionViewModel = new FB_VM.connexion_view_modle();
+            ConnexionViewModel = new FB_VM.connexion_view_model();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
