@@ -26,5 +26,7 @@ namespace FulBank.Model
             _plafond = plafond;
             _decouvert = decouvert;
         }
+
+        public decimal getSolde() {  return _solde; }
     }
 }

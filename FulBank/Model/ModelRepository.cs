@@ -43,7 +43,7 @@ namespace FulBank.Model
         }
 
 
-        public DataTable recupCompteDb()
+        public DataTable recupComptesUtilisateur()
         {
                 MySqlCommand cmd = new MySqlCommand("SELECT * FROM Compte", connexion);
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
@@ -65,5 +65,8 @@ namespace FulBank.Model
                 //}
             
         }
+
+
+
     }
 }

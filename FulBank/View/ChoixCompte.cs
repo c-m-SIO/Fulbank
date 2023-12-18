@@ -22,7 +22,7 @@ namespace FulBank
             InitializeComponent();
             model = new Model.ModelRepository();
             donneesCompte = new DataTable();
-            donneesCompte = model.recupCompteDb();
+            donneesCompte = model.recupComptesUtilisateur();
 
             foreach (DataRow row in donneesCompte.Rows)
             {
@@ -34,7 +34,7 @@ namespace FulBank
                 decimal decouvert = Convert.ToDecimal(row["decouvert"]);
 
                 leCompte = new unCompte(rib, taux, nom, solde, plafond, decouvert);
-
+                
                 MessageBox.Show(rib.ToString());
 
                 // Ajoutez un élément à la combobox en utilisant le nom de l'arme
@@ -66,6 +66,7 @@ namespace FulBank
 
         private void ChoixCompte_Load(object sender, EventArgs e)
         {
+
 
         }
     }

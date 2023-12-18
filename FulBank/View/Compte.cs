@@ -17,12 +17,14 @@ namespace FulBank
         public Compte()
         {
             InitializeComponent();
+
             ConnexionViewModel = new FB_VM.connexion_view_model();
+
         }
 
         private void Compte_Load(object sender, EventArgs e)
         {
-
+            lbl_solde.Text = "0";
         }
 
         private void Comptef(object sender, EventArgs e)
