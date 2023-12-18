@@ -1,84 +1,54 @@
 ﻿using MySqlConnector;
-<<<<<<< HEAD
 using System.Data.SqlClient;
-=======
 using System.Data;
->>>>>>> f51b3a1f704be5ae7904b249e407a7c799c051a9
 using System.Data.SQLite;
 using System.Drawing;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+
 
 namespace FulBank.Model
 {
     internal class ModelRepository
     {
-<<<<<<< HEAD
-        private string IPDB = "172.16.119.7";
-        private string UserDB = "mathieu";
-        private string PasswordDB = "squeezie";
-        private string DatabaseDB = "fulbank";
-        public string GetMdpBd(string Username)
-=======
         private MySqlConnection connexion;
         public ModelRepository()
->>>>>>> f51b3a1f704be5ae7904b249e407a7c799c051a9
         {
-            using (MySqlConnection connexion = new MySqlConnection())
+            var builder = new MySqlConnectionStringBuilder
             {
-<<<<<<< HEAD
-                
-                string stringconnexion = @"server=" + IPDB + ";userid=" + UserDB + ";password=" + PasswordDB + ";database=" + DatabaseDB;
-                connexion.ConnectionString = stringconnexion;
-                try
-                {
-                    connexion.Open();
-                    string query = "Select C.password from Client C where C.prenom = @Username;";
-                    MySqlCommand cmd = new MySqlCommand(query, connexion);
-                    cmd.Parameters.AddWithValue("@Username", Username);
-                    MySqlDataReader reader = cmd.ExecuteReader();
-=======
-                Server = "172.16.119.7",
+                Server = "172.16.119.6",
                 UserID = "mathieu",
                 Password = "squeezie",
                 Database = "fulbank",
             };
->>>>>>> f51b3a1f704be5ae7904b249e407a7c799c051a9
-
-                    while (reader.Read())
-                    {
-                        return (string)reader["password"];
-                    }
-
-<<<<<<< HEAD
-                }
-                catch
-                {
-                    Console.WriteLine("Impossible de se connecter à la base de donnée");
-                }
-
-            }return "erreur";
-=======
-            try
-            {
-                connexion.Open();
-                //MessageBox.Show("reussie");
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
->>>>>>> f51b3a1f704be5ae7904b249e407a7c799c051a9
+            connexion = new MySqlConnection(builder.ConnectionString);
+            connexion.Open();
         }
+        
+        public string GetMdpBd(string Username)
+        {
+            connexion.Close();
+            connexion.Open();
+            string query = "Select C.password from Client C where C.prenom = @Username;";
+            MySqlCommand cmd = new MySqlCommand(query, connexion);
+            cmd.Parameters.AddWithValue("@Username", Username);
+            MySqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                string res = reader.GetString(0);
+                connexion.Close();
+                return res;
+            }
+            connexion.Close();
+            return "erreur";
+        }
+
 
         public DataTable recupCompteDb()
         {
-           
                 MySqlCommand cmd = new MySqlCommand("SELECT * FROM Compte", connexion);
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
-                
 
             return dataTable;
 
