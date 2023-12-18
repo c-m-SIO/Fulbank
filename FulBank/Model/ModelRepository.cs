@@ -19,17 +19,25 @@ namespace FulBank.Model
                 
                 string stringconnexion = @"server=" + IPDB + ";userid=" + UserDB + ";password=" + PasswordDB + ";database=" + DatabaseDB;
                 connexion.ConnectionString = stringconnexion;
-                connexion.Open();
-
-                string query = "Select C.password from Client C where C.prenom = @Username;";
-                MySqlCommand cmd = new MySqlCommand(query, connexion);
-                cmd.Parameters.AddWithValue("@Username", Username);
-                MySqlDataReader reader = cmd.ExecuteReader();
-
-                while (reader.Read())
+                try
                 {
-                    return (string)reader["password"];
+                    connexion.Open();
+                    string query = "Select C.password from Client C where C.prenom = @Username;";
+                    MySqlCommand cmd = new MySqlCommand(query, connexion);
+                    cmd.Parameters.AddWithValue("@Username", Username);
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        return (string)reader["password"];
+                    }
+
                 }
+                catch
+                {
+                    Console.WriteLine("Impossible de se connecter à la base de donnée");
+                }
+
             }return "erreur";
         }
     }
