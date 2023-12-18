@@ -13,7 +13,6 @@ using System.Windows.Forms;
 using MySqlConnector;
 using System.Collections.Immutable;
 using System.Security.Cryptography;
-using FulBank.Model;
 using FB_VM = FulBank.ViewModel;
 
 namespace FulBank
@@ -29,7 +28,7 @@ namespace FulBank
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            
         }
 
 
@@ -48,44 +47,28 @@ namespace FulBank
 
             if (Username.Text == "")
             {
-                MessageBox.Show("Le champ USERNAME doit être remplie.");
+                MessageBox.Show("Le champ USERNAME doit être rempli.");
             }
             else if (password.Text == "")
             {
-                MessageBox.Show("Le champ PASSWORD doit être remplie.");
+                MessageBox.Show("Le champ PASSWORD doit être rempli.");
             }
             else
             {
+                switch (ConnexionViewModel.testconnexion(Username.Text, password.Text))
+                {
+                    case "success":
+                        MessageBox.Show("réussie");
+                        break;
+                    case "badpwd":
+                        MessageBox.Show("Mauvais mot de passe");
+                        break;
+                    case "erreur":
+                        MessageBox.Show("L'utilisateur " + Username.Text + " n'existe pas");
+                        break;
+                }
             }
-
-            //MessageBox.Show(ConnexionViewModel.testconnexion());
-
-            string about_this_user_query = "select * from user where username = " + Username.Text + ";";
-
-            /* about_this_user == mysql.execute(about_this_user_query); */
-
-            if (null == "" /*about_this_user*/)
-            {
-                MessageBox.Show("Cet utilisateur n'existe pas.");
-            }
-            else
-            {
-                string wanted_password_request = ("select password from user where username =" + Username.Text + ";");
-            }
-
-            /* wanted_password = mysql.execute(wanted_password_request) */
-
-            /*if (HashPasword(password.Text, out var salt) == ""/*wanted_password*/
-            //{
-            /* rediriger vers la vue de choix de compte, parmis les comptes correspondants à l'username */
-            /*}
-            else
-            {
-                MessageBox.Show("Mauvais mot de passe.");
-            }*/
-
         }
-
         private void login_Load(object sender, EventArgs e)
         {
 
