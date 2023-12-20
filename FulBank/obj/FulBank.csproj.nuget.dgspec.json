@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\MM\\Fulbank\\FulBank\\FulBank.csproj": {}
+    "C:\\Users\\moreau\\Documents\\merge\\Fulbank\\FulBank\\FulBank.csproj": {}
   },
   "projects": {
-    "D:\\MM\\Fulbank\\FulBank\\FulBank.csproj": {
+    "C:\\Users\\moreau\\Documents\\merge\\Fulbank\\FulBank\\FulBank.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MM\\Fulbank\\FulBank\\FulBank.csproj",
+        "projectUniqueName": "C:\\Users\\moreau\\Documents\\merge\\Fulbank\\FulBank\\FulBank.csproj",
         "projectName": "FulBank",
-        "projectPath": "D:\\MM\\Fulbank\\FulBank\\FulBank.csproj",
-        "packagesPath": "C:\\Users\\MARAIS\\.nuget\\packages\\",
-        "outputPath": "D:\\MM\\Fulbank\\FulBank\\obj\\",
+        "projectPath": "C:\\Users\\moreau\\Documents\\merge\\Fulbank\\FulBank\\FulBank.csproj",
+        "packagesPath": "C:\\Users\\moreau\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\moreau\\Documents\\merge\\Fulbank\\FulBank\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\MARAIS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\moreau\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

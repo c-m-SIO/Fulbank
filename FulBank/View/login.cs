@@ -59,9 +59,9 @@ namespace FulBank
                 switch (ConnexionViewModel.testconnexion(Username.Text, password.Text))
                 {
                     case "success":
-                        //Client Ceclient = new Client(ConnexionViewModel.getid(Username.Text),Username.Text,password.Text);
-                        //ChoixCompte page_choixcompte = new ChoixCompte(Client Ceclient);
-                        //page_choixcompte.Show();
+                        Client Ceclient = new Client(ConnexionViewModel.getid(Username.Text), Username.Text, password.Text);
+                        ChoixCompte page_choixcompte = new ChoixCompte(Ceclient);
+                        page_choixcompte.Show();
                         this.Hide();
                         MessageBox.Show("Connexion réussie");
                         break;

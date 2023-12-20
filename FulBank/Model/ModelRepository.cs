@@ -67,9 +67,11 @@ namespace FulBank.Model
             connexion.Close();
             return 0;
         }
-        public DataTable recupComptesUtilisateur()
+        public DataTable recupComptesUtilisateur(int id)
         {
-                MySqlCommand cmd = new MySqlCommand("SELECT * FROM Compte", connexion);
+            string query = "SELECT * FROM Compte WHERE id_client = @Id; ";
+                MySqlCommand cmd = new MySqlCommand(query, connexion);
+                cmd.Parameters.AddWithValue("@Id", id);
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
