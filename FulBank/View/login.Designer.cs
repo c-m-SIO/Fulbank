@@ -57,7 +57,8 @@
             Username.Name = "Username";
             Username.Size = new Size(278, 23);
             Username.TabIndex = 1;
-            Username.Text = "USERNAME";
+            Username.Text = "Luigi";
+            Username.PlaceholderText = "Username";
             Username.TextChanged += textBox1_TextChanged;
             // 
             // password
@@ -68,7 +69,10 @@
             password.Name = "password";
             password.Size = new Size(278, 23);
             password.TabIndex = 2;
-            password.Text = "*************";
+            password.Text = "squeezie";
+            password.PlaceholderText = "Password";
+            password.ForeColor = Color.DarkGray;
+            password.PasswordChar = '●';
             password.TextChanged += textBox2_TextChanged;
             // 
             // pictureBox1
