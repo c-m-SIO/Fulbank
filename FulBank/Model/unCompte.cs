@@ -10,18 +10,16 @@ namespace FulBank.Model
     {
         private int _rib;
         private decimal _taux;
-        private string _nomProprietaire;
         private decimal _solde;
         private decimal _plafond;
         private decimal _decouvert;
 
 
 
-        public unCompte( int rib, decimal taux, string nom, decimal solde, decimal plafond, decimal decouvert)
+        public unCompte( int rib, decimal taux, decimal solde, decimal plafond, decimal decouvert)
         {
             _rib = rib;
             _taux = taux;
-            _nomProprietaire = nom;
             _solde = solde;
             _plafond = plafond;
             _decouvert = decouvert;

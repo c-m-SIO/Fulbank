@@ -12,18 +12,24 @@ namespace FulBank.Model
         private int _id;
         private string _prenom;
         private string _password;
-        private int _salt;
         private List<unCompte> _compteList;
-        public Client(int id, string prenom, string password, int salt) {
+        public Client(int id, string prenom, string password) {
             _id = id;
             _prenom = prenom; 
             _password = password;
-            _salt = salt;
+            _compteList = new List<unCompte>();
+
         }
 
         public void ajouterCompte(unCompte compte)
         {
             this._compteList.Add(compte);
         }
+
+        public int getId() { return this._id; }
+
+        public string getPrenom() { return this._prenom;}
+        public string getPassword() { return this._password;}
+        public List<unCompte> getLesComptes() { return this._compteList;}
     }
 }
