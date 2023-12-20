@@ -11,7 +11,7 @@ namespace FulBank
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new ChoixCompte(new Model.Client (3, "Luigi", "squeezie")));
+            Application.Run(new login());
         }
     }
 }

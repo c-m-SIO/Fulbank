@@ -14,6 +14,7 @@ using MySqlConnector;
 using System.Collections.Immutable;
 using System.Security.Cryptography;
 using FB_VM = FulBank.ViewModel;
+using FulBank.Model;
 
 namespace FulBank
 {
@@ -58,7 +59,11 @@ namespace FulBank
                 switch (ConnexionViewModel.testconnexion(Username.Text, password.Text))
                 {
                     case "success":
-                        MessageBox.Show("réussie");
+                        Client Ceclient = new Client(ConnexionViewModel.getid(Username.Text), Username.Text, password.Text);
+                        ChoixCompte page_choixcompte = new ChoixCompte(Ceclient);
+                        page_choixcompte.Show();
+                        this.Hide();
+                        MessageBox.Show("Connexion réussie");
                         break;
                     case "badpwd":
                         MessageBox.Show("Mauvais mot de passe");

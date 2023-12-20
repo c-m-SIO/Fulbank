@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Nr/6ppsS4dft9hxbbT3LMuQyK3EeXRohBJYxcZbD9uIr+NamH80uMlFYM+k6bOvN3JxniNU+U94yNTpr2cbrvw==",
+  "dgSpecHash": "977K4DnpNsYeF4VVrZ459qDM/CTwCjuw3A19ES4iiPrSgHJ1Ju281Qxe5e4/OfzIib9W2yKTmdFIm1wIh8gpsg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\moreau\\Documents\\Fulbank\\FulBank\\FulBank.csproj",
+  "projectFilePath": "C:\\Users\\moreau\\Documents\\merge\\Fulbank\\FulBank\\FulBank.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\moreau\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\moreau\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

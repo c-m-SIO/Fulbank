@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\moreau\\Documents\\Fulbank\\FulBank\\FulBank.csproj": {}
+    "C:\\Users\\moreau\\Documents\\merge\\Fulbank\\FulBank\\FulBank.csproj": {}
   },
   "projects": {
-    "C:\\Users\\moreau\\Documents\\Fulbank\\FulBank\\FulBank.csproj": {
+    "C:\\Users\\moreau\\Documents\\merge\\Fulbank\\FulBank\\FulBank.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\moreau\\Documents\\Fulbank\\FulBank\\FulBank.csproj",
+        "projectUniqueName": "C:\\Users\\moreau\\Documents\\merge\\Fulbank\\FulBank\\FulBank.csproj",
         "projectName": "FulBank",
-        "projectPath": "C:\\Users\\moreau\\Documents\\Fulbank\\FulBank\\FulBank.csproj",
+        "projectPath": "C:\\Users\\moreau\\Documents\\merge\\Fulbank\\FulBank\\FulBank.csproj",
         "packagesPath": "C:\\Users\\moreau\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\moreau\\Documents\\Fulbank\\FulBank\\obj\\",
+        "outputPath": "C:\\Users\\moreau\\Documents\\merge\\Fulbank\\FulBank\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

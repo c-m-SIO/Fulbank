@@ -39,7 +39,7 @@ namespace FulBank
                 client.ajouterCompte(leCompte);
                 //MessageBox.Show(rib.ToString());
 
-                ;
+                
 
             }
         }
