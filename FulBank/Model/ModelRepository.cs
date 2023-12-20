@@ -23,7 +23,16 @@ namespace FulBank.Model
             connexion = new MySqlConnection(builder.ConnectionString);
             connexion.Open();
         }
-        
+
+        public void DoQuery(string query)
+        {
+            connexion.Close();
+            connexion.Open();
+            MySqlCommand cmd = new MySqlCommand(query, connexion);
+            MySqlDataReader reader = cmd.ExecuteReader();
+            MessageBox.Show($"Query réalisée aves succès : \n {query}");
+            connexion.Close();
+        }
         public string GetMdpBd(string Username)
         {
             connexion.Close();
@@ -41,8 +50,23 @@ namespace FulBank.Model
             connexion.Close();
             return "erreur";
         }
-
-
+        public int GetIdBd(string Username)
+        {
+            connexion.Close();
+            connexion.Open();
+            string query = "Select C.id from Client C where C.prenom = @Username;";
+            MySqlCommand cmd = new MySqlCommand(query, connexion);
+            cmd.Parameters.AddWithValue("@Username", Username);
+            MySqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                int res = reader.GetInt32(0);
+                connexion.Close();
+                return res;
+            }
+            connexion.Close();
+            return 0;
+        }
         public DataTable recupComptesUtilisateur()
         {
                 MySqlCommand cmd = new MySqlCommand("SELECT * FROM Compte", connexion);
