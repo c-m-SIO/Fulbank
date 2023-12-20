@@ -16,11 +16,18 @@ namespace FulBank.Model
             _id = id;
             _prenom = prenom; 
             _password = password;
+            _compteList = new List<unCompte>();
         }
 
         public void ajouterCompte(unCompte compte)
         {
             this._compteList.Add(compte);
         }
+
+        public int getId() { return this._id; }
+
+        public string getPrenom() { return this._prenom;}
+        public string getPassword() { return this._password;}
+        public List<unCompte> getLesComptes() { return this._compteList;}
     }
 }

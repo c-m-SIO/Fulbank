@@ -121,7 +121,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAXkAAAFfCAYAAACr9rwWAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAANPhJREFUeF7tnQl4FFW6v8dtdOY6zqijznLnztx7Z587bhfX0VFHGRcUkV1RUQRF
+        vAAADrwBlbxySQAANPhJREFUeF7tnQl4FFW6v8dtdOY6zqijznLnztx7Z587bhfX0VFHGRcUkV1RUQRF
         QBQU3MBRNkEEASNriAn7TggJYAgIGAj7EgJhhwAhJJB9T6fz3e/r/+n+d7pPJ1XpTlLV+b3P83sIXedU
         VVedevt0ddWp7wEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACBkHM3I/tOO/aceUPm7ivv/oYh7ng2Jbn6I
@@ -350,4 +350,10 @@
         AAAAAAAAAIBt+d73/g9dQLBybD/gvgAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="mySqlCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="mySqlCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>
